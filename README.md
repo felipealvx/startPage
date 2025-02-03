@@ -1,3 +1,3 @@
-## My Start Page in Firefox
+## My Start Page in Firefox/Zen Browser
 
-<img src="./assets/page.png" />
+<img src="./assets/page2.png" />

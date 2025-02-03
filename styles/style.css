@@ -22,11 +22,12 @@ body {
 }
 
 .container {
+    margin-top: 150px;
     width: 60%;
     max-width: 820px;
     display: grid;
     padding: 2rem;
-    gap: 2rem;
+    gap: 1rem;
     grid-template:
         "card_1 card_2" 1fr
         "card_3 card_3" 1fr
@@ -35,6 +36,7 @@ body {
 }
 
 .card_1 {
+    margin-top: 90px;
     grid-area: card_1;
     border-radius: 1rem;
 }
@@ -45,14 +47,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    top: 20%;
-    left: 30%;
+    top: 10%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    /* border: 1px solid #ddd; */
     width: 1000px;
+    max-height: 200px;
     padding: 10px;
     border-radius: 10px;
-    /* background: #4a4e6936; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.3px);
     -webkit-backdrop-filter: blur(9.3px);
@@ -72,6 +73,7 @@ body {
 }
 
 .image {
+    margin-top: -10px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -97,6 +99,9 @@ body {
 }
 
 .card_2 {
+    height: 100px;
+    margin-top: 80px;
+    margin-bottom: 10px;
     grid-area: card_2;
     display: flex;
     align-items: center;
@@ -138,9 +143,11 @@ body {
 }
 
 .card_3 {
+    margin: 0;
     grid-area: card_3;
     display: flex;
     width: 100%;
+    height: 100px;
     flex-direction: column;
     justify-content: center;
 }
@@ -169,6 +176,8 @@ input {
 }
 
 .card_4 {
+    margin: 0;
+    margin-top: -60px;
     grid-area: card_4;
     display: flex;
     justify-content: space-between;
@@ -232,6 +241,36 @@ input {
 
 .link:nth-child(5):hover {
     box-shadow: 0rem 0rem 4rem #f2e9e4;
+    transition: all ease-in-out 0.2s;
+
+    .icon {
+        color: #24292e;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.link:nth-child(6):hover {
+    box-shadow: 0rem 0rem 4rem #0b906f;
+    transition: all ease-in-out 0.2s;
+
+    .icon {
+        color: #24292e;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.link:nth-child(7):hover {
+    box-shadow: 0rem 0rem 4rem #1496f4;
+    transition: all ease-in-out 0.2s;
+
+    .icon {
+        color: #24292e;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.link:nth-child(8):hover {
+    box-shadow: 0rem 0rem 4rem #1439f4;
     transition: all ease-in-out 0.2s;
 
     .icon {

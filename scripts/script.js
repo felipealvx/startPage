@@ -4,9 +4,9 @@ function startTime() {
     let min = today.getMinutes();
     let sec = today.getSeconds();
 
-    let ampm = hours >= 12 ? 'PM' : 'AM'; // Determine AM/PM
-    hours = hours % 12; // Convert hours to 12-hour format
-    hours = hours ? hours : 12; // If hour is 0 (midnight), set it to 12
+    let ampm = hours >= 12 ? 'PM' : 'AM'; 
+    hours = hours % 12; 
+    hours = hours ? hours : 12; 
     min = checkTime(min);
 
     document.getElementById('txt').innerHTML = hours + ":" + min + " " + ampm;
@@ -78,5 +78,4 @@ function displayQuote() {
     document.getElementById('author').textContent = `— ${quote.author}`;
 }
 
-// Call displayQuote on page load
 window.onload = displayQuote;
