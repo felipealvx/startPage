@@ -1,61 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .container {
+            /* border: 1px solid red; */
+        }
+
+        .card_1 {
+            /* border: 1px solid #fff; */
+            /* display: flex; */
+        }
+
+        #quote-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            top: 20%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            /* border: 1px solid #ddd; */
+            width: 1000px;
+            padding: 10px;
+            border-radius: 10px;
+            /* background: #4a4e6936; */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9.3px);
+            -webkit-backdrop-filter: blur(9.3px);
+            border: 0.5px solid rgba(255, 255, 255, 0.102);
+        }
+
+        .quote {
+            color: #fff;
+            font-size: 24px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .author {
+            font-size: 18px;
+            color: #ddd;
+        }
+    </style>
 </head>
+
 <body>
+    <div id="quote-container">
+        <p id="quote" class="quote"></p>
+        <p id="author" class="author"></p>
+    </div>
     <div class="container">
         <div class="card_1">
             <div class="image">
-                <p>当たる も 八卦 当たらぬ も 八卦</p>
+                <p>Welcome, Purrs</p>
                 <div class="img"></div>
             </div>
-            
+
         </div>
         <div class="card_2">
             <div id="txt"></div>
             <div class="secondsContainer">
-                <div id="seconds"></div> 
+                <div id="seconds"></div>
             </div>
         </div>
-        <div class="card_3">
-            <form action="https://www.google.com/search?q=a">
-                <div class="search">
-                    <input type="search" name="q" aria-label="Search" placeholder="Search on Google">
-                    <i class="fa-solid fa-magnifying-glass iconSearch"></i>
-                </div>
-                <button type="submit" hidden>
-                    Search
-                </button>
-            </form>
-        </div>
+
         <div class="card_4">
             <a class="link" href="https://www.youtube.com/">
                 <p>Youtube</p>
                 <i class="fa-brands fa-youtube icon"></i>
             </a>
-            <a class="link" href="https://open.spotify.com/">
-                <p>Spotify</p>
-                <i class="fa-brands fa-spotify icon"></i>
+            <a class="link" href="https://music.youtube.com/">
+                <p>YouTube Music</p>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/youtube-music.png"
+                    alt="youtube-music" />
             </a>
-            <a class="link" href="https://www.reddit.com/">
-                <p>Reddit</p>
-                <i class="fa-brands fa-reddit-alien icon"></i>
+            <a class="link" href="https://web.whatsapp.com/">
+                <p>WhatsApp Web</p>
+                <i class="fa-brands fa-whatsapp icon"></i>
             </a>
-            <a class="link" href="https://www.linkedin.com/">
-                <p>LinkedIn</p>
-                <i class="fa-brands fa-linkedin-in icon"></i>
+            <a class="link" href="https://chat.openai.com/">
+                <p>ChatGPT</p>
+                <img width="50" height="50" src="https://img.icons8.com/stickers/50/chatgpt.png" alt="chatgpt"/>
             </a>
             <a class="link" href="https://github.com/">
                 <p>Github</p>
                 <i class="fa-brands fa-github-alt icon"></i>
             </a>
         </div>
+
     </div>
+
+    <script>
+        const quotes = [
+            { text: "We cannot solve problems with the kind of thinking we employed when we came up with them.", author: "Albert Einstein" },
+            { text: "Learn as if you will live forever, live like you will die tomorrow.", author: "Mahatma Gandhi" },
+            { text: "Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.", author: "Mark Twain" },
+            { text: "When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out.", author: "Eleanor Roosevelt" },
+            { text: "When you change your thoughts, remember to also change your world.", author: "Norman Vincent Peale" },
+            { text: "It is only when we take chances that our lives improve. The initial and the most difficult risk we need to take is to become honest.", author: "Walter Anderson" },
+            { text: "Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.", author: "Diane McLaren" },
+            { text: "Success is not final; failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
+            { text: "It is better to fail in originality than to succeed in imitation.", author: "Herman Melville" },
+            { text: "The road to success and the road to failure are almost exactly the same.", author: "Colin R. Davis" },
+            { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" },
+            { text: "Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.", author: "Dale Carnegie" },
+            { text: "Nothing in the world can take the place of persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan ‘Press On’ has solved and always will solve the problems of the human race.", author: "Calvin Coolidge" },
+            { text: "There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.", author: "Mister Rogers" },
+            { text: "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.", author: "John Wooden" },
+            { text: "I never dreamed about success. I worked for it.", author: "Estée Lauder" },
+            { text: "Success is getting what you want; happiness is wanting what you get.", author: "W. P. Kinsella" },
+            { text: "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.", author: "Winston Churchill" },
+            { text: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
+            { text: "You learn more from failure than from success. Don’t let it stop you. Failure builds character.", author: "Unknown" },
+            { text: "If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.", author: "Steve Jobs" },
+            { text: "Experience is a hard teacher because she gives the test first, the lesson afterward.", author: "Vernon Sanders Law" },
+            { text: "To know how much there is to know is the beginning of learning to live.", author: "Dorothy West" },
+            { text: "Goal setting is the secret to a compelling future.", author: "Tony Robbins" },
+            { text: "Concentrate all your thoughts upon the work in hand. The sun’s rays do not burn until brought to a focus.", author: "Alexander Graham Bell" },
+            { text: "Either you run the day or the day runs you.", author: "Jim Rohn" },
+            { text: "I’m a great believer in luck, and I find the harder I work, the more I have of it.", author: "Thomas Jefferson" },
+            { text: "When we strive to become better than we are, everything around us becomes better too.", author: "Paulo Coelho" },
+            { text: "Opportunity is missed by most people because it is dressed in overalls and looks like work.", author: "Thomas Edison" },
+            { text: "Setting goals is the first step in turning the invisible into the visible.", author: "Tony Robbins" },
+            { text: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it.", author: "Steve Jobs" }
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        }
+
+        function displayQuote() {
+            const quote = getRandomQuote();
+            document.getElementById('quote').textContent = `"${quote.text}"`;
+            document.getElementById('author').textContent = `— ${quote.author}`;
+        }
+
+        // Call displayQuote on page load
+        window.onload = displayQuote;
+    </script>
+
     <script src="scripts/script.js"></script>
 </body>
+
 </html>

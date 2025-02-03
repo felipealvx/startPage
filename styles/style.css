@@ -45,6 +45,7 @@ body {
     display: flex;
     gap: 1rem;
     p {
+        margin-top: 30px;
         width:50%;
         font-size: 2rem;
         font-weight: 800;
@@ -165,7 +166,7 @@ input {
     }
 }
 
-.link:nth-child(2):hover {
+.link:nth-child(3):hover {
     box-shadow: 0rem 0rem 4rem #1DB954;
     transition: all ease-in-out 0.2s;
     .icon {
@@ -174,7 +175,7 @@ input {
     }
 }
  
-.link:nth-child(3):hover {
+.link:nth-child(2):hover {
     box-shadow: 0rem 0rem 4rem #FF5700;
     transition: all ease-in-out 0.2s;
     .icon {
