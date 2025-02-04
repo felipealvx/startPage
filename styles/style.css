@@ -278,6 +278,15 @@ input {
         transition: all ease-in-out 0.5s;
     }
 }
+.link:nth-child(9):hover {
+    box-shadow: 0rem 0rem 4rem #cb14f4;
+    transition: all ease-in-out 0.2s;
+
+    .icon {
+        color: #24292e;
+        transition: all ease-in-out 0.5s;
+    }
+}
 
 .icon {
     font-size: 40px;
